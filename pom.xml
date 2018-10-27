@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <docker.image.prefix>qasw</docker.image.prefix>
+        <docker.image.prefix>artvit</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -56,7 +56,6 @@
                 <version>1.4.8</version>
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
-
                 </configuration>
             </plugin>
             <plugin>

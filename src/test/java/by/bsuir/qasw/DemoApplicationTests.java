@@ -1,4 +1,4 @@
-package by.bsuir.demo;
+package by.bsuir.qasw;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

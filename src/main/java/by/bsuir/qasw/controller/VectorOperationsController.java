@@ -1,4 +1,4 @@
-package by.bsuir.demo.controller;
+package by.bsuir.qasw.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
