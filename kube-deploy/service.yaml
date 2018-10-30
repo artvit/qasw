@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2018-10-30T20:44:54Z
+  labels:
+    run: qasw-depl
+  name: qasw-depl
+  namespace: default
+  resourceVersion: "24117"
+  selfLink: /api/v1/namespaces/default/services/qasw-depl
+  uid: a7ae7145-dc84-11e8-bb00-080027102b2c
+spec:
+  clusterIP: 10.107.243.178
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31214
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: qasw-depl
+  sessionAffinity: None
+  type: LoadBalancer

@@ -1,0 +1,47 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: 2018-10-30T12:37:20Z
+  generation: 2
+  labels:
+    run: qasw-depl
+  name: qasw-depl
+  namespace: default
+  resourceVersion: "23980"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/qasw-depl
+  uid: 8b635cd0-dc40-11e8-9d8b-080027102b2c
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      run: qasw-depl
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: qasw-depl
+    spec:
+      containers:
+      - image: artvit/qasw:latest
+        imagePullPolicy: Always
+        name: qasw-depl
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
