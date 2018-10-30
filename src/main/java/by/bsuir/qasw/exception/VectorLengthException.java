@@ -3,7 +3,7 @@ package by.bsuir.qasw.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "Wrong vector getVectorLength")
+@ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "Wrong vector length")
 public class VectorLengthException extends OperationException {
     public VectorLengthException() {
     }
