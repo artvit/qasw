@@ -28,11 +28,11 @@ public class OperationService {
         return Math.sqrt(vector.stream().mapToDouble(v -> v * v).sum());
     }
 
-    public List<Double> dotProduct(List<Double> vector1, List<Double> vector2) {
+    public Double dotProduct(List<Double> vector1, List<Double> vector2) {
         checkVectorLengths(vector1, vector2);
         return IntStream.range(0, vector1.size())
-                .mapToObj(index -> vector1.get(index) * vector2.get(index))
-                .collect(Collectors.toList());
+                .mapToDouble(index -> vector1.get(index) * vector2.get(index))
+                .sum();
     }
 
     private void checkVectorLengths(List<Double> vector1, List<Double> vector2) {

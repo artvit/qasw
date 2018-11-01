@@ -32,8 +32,8 @@ public class VectorOperationsController {
     }
 
     @PostMapping("/dot-product")
-    public Vector dotProduct(@RequestBody VectorPair vectorPair) {
-        return new Vector(operationService.dotProduct(vectorPair.getVector1(), vectorPair.getVector2()));
+    public Double dotProduct(@RequestBody VectorPair vectorPair) {
+        return operationService.dotProduct(vectorPair.getVector1(), vectorPair.getVector2());
     }
 
     @PostMapping("/scalar-multiply")
